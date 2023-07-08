@@ -14,11 +14,11 @@ public class Veiculo implements Comparable<Veiculo>{
     }
 
     private void geraChassi(){
-        if(this.numVeiculos % 2 == 0)
+        if(Veiculo.numVeiculos % 2 == 0)
             this.chassi = 202050000 - geradorChassi.nextInt(50000);
         else
             this.chassi = 202050000 + geradorChassi.nextInt(50000);
-        this.numVeiculos++;
+        Veiculo.numVeiculos++;
     }
 
     private void geraMarca(){
