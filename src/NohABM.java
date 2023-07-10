@@ -51,5 +51,9 @@ public class NohABM {
         this.pai = pai;
     }
 
+    public String toString() {
+        return veiculo.toString();
+    }
+
     
 }

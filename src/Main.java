@@ -5,13 +5,18 @@ public class Main {
         long duracaoInsercao = 0;
         long duracaoImprimir = 0;
         final int VEICULOS_TOTAL = 100000;
-
+        Veiculo[] veiculos = new Veiculo[VEICULOS_TOTAL];
+        for (int i = 0; i < VEICULOS_TOTAL; i++) {
+            Veiculo veiculo = new Veiculo();
+            veiculos[i] = veiculo;
+        }
+        
         // TESTE VETOR MAPA
         Vetor_Mapa vetor = new Vetor_Mapa();
 
         tempoInicio = System.nanoTime();
         for (int i = 0; i < VEICULOS_TOTAL; i++) {
-            Veiculo veiculo = new Veiculo();
+            Veiculo veiculo = veiculos[i];
             vetor.put(veiculo.getChassi(), veiculo);
         }
         tempoFim = System.nanoTime();
@@ -45,7 +50,7 @@ public class Main {
 
         tempoInicio = System.nanoTime();
         for (int i = 0; i < VEICULOS_TOTAL; i++) {
-            Veiculo veiculo = new Veiculo();
+            Veiculo veiculo = veiculos[i];
             lde.put(veiculo.getChassi(), veiculo);
         }
         tempoFim = System.nanoTime();
@@ -79,7 +84,7 @@ public class Main {
 
         tempoInicio = System.nanoTime();
         for (int i = 0; i < VEICULOS_TOTAL; i++) {
-            Veiculo veiculo = new Veiculo();
+            Veiculo veiculo = veiculos[i];
             abm.put(veiculo.getChassi(), veiculo);
         }
         tempoFim = System.nanoTime();
